@@ -1,0 +1,312 @@
+      /* Main styles */
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+
+      .text {
+          fill: none;
+          stroke-width: 6;
+          stroke-linejoin: round;
+          stroke-dasharray: 70 330;
+          stroke-dashoffset: 0;
+          -webkit-animation: stroke 1s infinite linear;
+          animation: stroke 2s infinite linear;
+      }
+
+      .text:nth-child(5n + 1) {
+          stroke: #F2385A;
+          -webkit-animation-delay: -1.2s;
+          animation-delay: -1.2s;
+      }
+
+      .text:nth-child(5n + 2) {
+          stroke: #F5A503;
+          -webkit-animation-delay: -2.4s;
+          animation-delay: -2.4s;
+      }
+
+      .text:nth-child(5n + 3) {
+          stroke: #E9F1DF;
+          -webkit-animation-delay: -3.6s;
+          animation-delay: -3.6s;
+      }
+
+      .text:nth-child(5n + 4) {
+          stroke: #56D9CD;
+          -webkit-animation-delay: -4.8s;
+          animation-delay: -4.8s;
+      }
+
+      .text:nth-child(5n + 5) {
+          stroke: #3AA1BF;
+          -webkit-animation-delay: -6s;
+          animation-delay: -6s;
+      }
+
+      @-webkit-keyframes stroke {
+          100% {
+              stroke-dashoffset: -400;
+          }
+      }
+
+      @keyframes stroke {
+          100% {
+              stroke-dashoffset: -400;
+          }
+      }
+
+      svg {
+          z-index: -1;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          margin-top: -17em;
+      }
+
+
+
+      nav {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          background-color: #333;
+          color: #fff;
+          box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25);
+      }
+
+      nav ul {
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+      }
+
+      nav li {
+          display: inline-block;
+          margin: 0 10px;
+      }
+
+      nav a {
+          display: block;
+          padding: 10px;
+          color: #fff;
+          text-decoration: none;
+      }
+
+      nav a:hover {
+          background-color: #555;
+      }
+
+      .slider {
+          position: relative;
+          top: 38px;
+          width: 100%;
+          height: 300px;
+          overflow: hidden;
+          z-index: -1;
+      }
+
+      .slider img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0;
+          transition: opacity 1s ease-in-out;
+      }
+
+      .slider img:first-child {
+          opacity: 1;
+      }
+
+      .slider img.active {
+          opacity: 1;
+      }
+
+      button {
+          margin: 20px;
+      }
+
+      .custom-btn {
+          width: 130px;
+          height: 40px;
+          color: #fff;
+          border-radius: 5px;
+          padding: 10px 25px;
+          font-family: 'Lato', sans-serif;
+          font-weight: 500;
+          background: transparent;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          position: relative;
+          display: inline-block;
+          box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+              7px 7px 20px 0px rgba(0, 0, 0, .1),
+              4px 4px 5px 0px rgba(0, 0, 0, .1);
+          outline: none;
+      }
+
+
+
+
+      /* 3 */
+      .btn-3 {
+          background: rgb(0, 172, 238);
+          background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+          width: 130px;
+          height: 40px;
+          line-height: 42px;
+          padding: 0;
+          border: none;
+
+      }
+
+      .btn-3 span {
+          position: relative;
+          display: block;
+          width: 100%;
+          height: 100%;
+      }
+
+      .btn-3:before,
+      .btn-3:after {
+          position: absolute;
+          content: "";
+          right: 0;
+          top: 0;
+          background: rgba(2, 126, 251, 1);
+          transition: all 0.3s ease;
+      }
+
+      .btn-3:before {
+          height: 0%;
+          width: 2px;
+      }
+
+      .btn-3:after {
+          width: 0%;
+          height: 2px;
+      }
+
+      .btn-3:hover {
+          background: transparent;
+          box-shadow: none;
+      }
+
+      .btn-3:hover:before {
+          height: 100%;
+      }
+
+      .btn-3:hover:after {
+          width: 100%;
+      }
+
+      .btn-3 span:hover {
+          color: rgba(2, 126, 251, 1);
+      }
+
+      .btn-3 span:before,
+      .btn-3 span:after {
+          position: absolute;
+          content: "";
+          left: 0;
+          bottom: 0;
+          background: rgba(2, 126, 251, 1);
+          transition: all 0.3s ease;
+      }
+
+      .btn-3 span:before {
+          width: 2px;
+          height: 0%;
+      }
+
+      .btn-3 span:after {
+          width: 0%;
+          height: 2px;
+      }
+
+      .btn-3 span:hover:before {
+          height: 100%;
+      }
+
+      .btn-3 span:hover:after {
+          width: 100%;
+      }
+
+      .file-input {
+          position: relative;
+      }
+
+      .file-input::before {
+          content: 'Choose files';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border: 2px dashed #ddd;
+          border-radius: 5px;
+          padding: 10px;
+          box-sizing: border-box;
+          transition: border-color 0.3s ease;
+      }
+
+      .file-input:hover::before {
+          border-color: #4CAF50;
+      }
+
+      .file-input:active::before {
+          border-color: #2196F3;
+      }
+
+      .file-input:focus::before {
+          outline: none;
+          border-color: #E91E63;
+      }
+
+      .file-input input[type="file"] {
+          display: none;
+      }
+
+      .file-input input[type="file"]:focus+label::before {
+          border-color: #E91E63;
+      }
+
+      /* 9 */
+      .download-btn {
+          border: none;
+          transition: all 0.3s ease;
+          overflow: hidden;
+      }
+
+      .download-btn:after {
+          position: absolute;
+          content: " ";
+          z-index: -1;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #1fd1f9;
+          background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+          transition: all 0.3s ease;
+      }
+
+      .download-btn:hover {
+          background: transparent;
+          box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2),
+              inset -4px -4px 6px 0 rgba(255, 255, 255, .5),
+              inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+          color: #fff;
+      }
+
+      .download-btn:hover:after {
+          -webkit-transform: scale(2) rotate(180deg);
+          transform: scale(2) rotate(180deg);
+          box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2),
+              inset -4px -4px 6px 0 rgba(255, 255, 255, .5),
+              inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+      }

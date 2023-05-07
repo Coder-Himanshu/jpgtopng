@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOCX to PDF Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="slider">
+        <img
+            src="https://img.freepik.com/free-photo/sunset-silhouettes-trees-mountains-generative-ai_169016-29376.jpg?w=1800&t=st=1683355016~exp=1683355616~hmac=e0bc1a4f07d0532d52f5f799541afc960278aa130ae298bc8a9b8ce7a3152ece">
+        <img
+            src="https://img.freepik.com/free-photo/landscape-shot-beautiful-cholatse-mountains-body-water-khumbu-nepal_181624-24825.jpg?w=2000&t=st=1683354990~exp=1683355590~hmac=324c040fa2855457ab87bfff9b15cde018b357603f4ee1ef514c1248c0aeaaa4">
+        <img
+            src="https://webneel.com/daily/sites/default/files/images/daily/08-2018/2-nature-photography-besmirhamiti.preview.jpg">
+    </div>
+    <br /><br />
+    <svg xmlns="http://www.w3.org/2000/svg"  version="1.1" viewBox="0 0 600 300">
+
+        <!-- Symbol -->
+        <symbol id="s-text">
+            <text style="font: 3em Open Sans, Impact;
+  text-transform: uppercase;
+  margin: 0;" text-anchor="middle" x="50%" y="50%" dy=".35em">
+                JPG to PNG Converter
+            </text>
+        </symbol>
+
+        <!-- Duplicate symbols -->
+        <use xlink:href="#s-text" class="text"></use>
+        <use xlink:href="#s-text" class="text"></use>
+        <use xlink:href="#s-text" class="text"></use>
+        <use xlink:href="#s-text" class="text"></use>
+        <use xlink:href="#s-text" class="text"></use>
+
+    </svg>
+
+
+    <form style="display:flex;margin-top: 13em;justify-content:center;" class="animate__animated animate__fadeIn">
+        <input type="file" style="margin-top: 2.1em !important;" id="fileInput" accept="image/jpeg">
+        <button class="custom-btn btn-3 " type="button" onclick="convertJpgToPng()"><span>Convert</span></button>
+    </form>
+    <script src="index.js"></script>
+</body>
+
+</html>
